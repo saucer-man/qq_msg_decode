@@ -24,7 +24,7 @@ class Buffer:
         self.off = 0
 
     def empty(self):
-        return len(self.buf) <= self.off
+        return self.buf is None or len(self.buf) <= self.off
 
     # 读取n个字节
     def read(self, n) -> bytes:
